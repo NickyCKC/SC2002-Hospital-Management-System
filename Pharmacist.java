@@ -3,7 +3,6 @@ package hospital;
 import java.util.*;
 
 public class Pharmacist {
-    // Declare private variables for id, name, gender, age, prescriptions, and inventory
     private String id;
     private String name;
     private String gender;
@@ -11,7 +10,6 @@ public class Pharmacist {
     private Map<String, List<Prescription>> prescriptions;
     private Map<String, Medication> inventory;
 
-    // Constructor to initialize the variables
     public Pharmacist(String id, String name, String gender, int age) {
         this.id = id;
         this.name = name;
@@ -21,7 +19,6 @@ public class Pharmacist {
         this.inventory = new HashMap<>();
     }
 
-    // Getter and setter methods for id
     public String getId() {
         return id;
     }
@@ -30,7 +27,6 @@ public class Pharmacist {
         this.id = id;
     }
 
-    // Getter and setter methods for name
     public String getName() {
         return name;
     }
@@ -39,7 +35,6 @@ public class Pharmacist {
         this.name = name;
     }
 
-    // Getter and setter methods for gender
     public String getGender() {
         return gender;
     }
@@ -48,7 +43,6 @@ public class Pharmacist {
         this.gender = gender;
     }
 
-    // Getter and setter methods for age
     public int getAge() {
         return age;
     }
@@ -101,20 +95,17 @@ public class Pharmacist {
         return "Medication not found";
     }
 
-    // Inner class for Prescription, Medication
     class Prescription {
         private Medication medication;
         private String dosage;
         private String duration;
 
-        // Constructor to initialize the variables
         public Prescription(Medication medication, String dosage, String duration) {
             this.medication = medication;
             this.dosage = dosage;
             this.duration = duration;
         }
 
-        // Getter and setter methods
         public Medication getMedication() {
             return medication;
         }
@@ -147,7 +138,6 @@ public class Pharmacist {
         private int replenishmentRequest;
         private String status;
 
-        // Constructor to initialize the variables
         public Medication(String name, int stockLevel, int lowStockAlertLevel) {
             this.name = name;
             this.stockLevel = stockLevel;
@@ -155,7 +145,6 @@ public class Pharmacist {
             this.status = "pending";
         }
 
-        // Getter and setter methods
         public String getName() {
             return name;
         }

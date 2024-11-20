@@ -85,7 +85,7 @@ public class AdminService {
         // check for Doctor or Pharmacist
         String staffRole;
         do {
-            System.out.print("Enter Staff Role (Doctor/Pharmacist): ");
+            //System.out.print("Enter Staff Role (Doctor/Pharmacist): ");
             staffRole = scanner.nextLine();
 
         } while (!staffRole.toUpperCase().equals(Role.DOCTOR.getDisplayValue()) && !staffRole.toUpperCase().equals(Role.PHARMACIST.getDisplayValue()));
@@ -355,6 +355,9 @@ public class AdminService {
         // Appointment Details Format (Doctor ID, Status, Appointment Holder(PatientID), Status, Outcome records for completed appointments
         System.out.println("\n--- All Appointments ---");
         for (Appointment appointment : allAppointments) {
+        	if (appointment.getAppointmentStatus().equals(Status.FREE.getDisplayValue())) {
+                continue;
+            }
             System.out.println("\n---- " + appointment.getAppointmentTime() + "------");
             System.out.println("Doctor ID: " + appointment.getDoctorId());
             System.out.println("Status: " + appointment.getAppointmentStatus());

@@ -96,7 +96,7 @@ public class AppointmentRepository {
                     assert appointmentDate != null;
                     assert appointmentTime != null;
 
-                    if (appointmentDate.equals(dateChoice) && appointmentTime.isAfter(LocalTime.now())) {
+                    if ((appointmentDate.equals(dateChoice) && appointmentTime.isAfter(LocalTime.now())) || appointmentDate.isAfter(LocalDate.now())) {
                         doctorSchedule.add(appointment);
                     }
                 }

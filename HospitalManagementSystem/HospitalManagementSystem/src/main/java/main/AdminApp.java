@@ -114,10 +114,10 @@ public class AdminApp {
                     adminService.displayRemoveMedicineInput(scanner);
                     break;
                 case 5:
-                    System.out.println("Invalid input! Please try again.");
+                    System.out.println("Returning to main menu...");
                     break;
                 default:
-                    System.out.println("Returning to main menu...");
+                    System.out.println("Invalid input! Please try again.");
             }
         } while (adminChoice !=5);
     }

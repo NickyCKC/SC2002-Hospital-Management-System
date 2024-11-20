@@ -12,5 +12,5 @@ This is the group repository for SC2002-OOP-Grp_Proj, we are SCS4 Group 5.
 1. Download and unzip the folder "Hospital Management System".
 2. Refer to "Set up instructions.docx".
 
-##Testcases Demo Video
+## Testcases Demo Video
 https://youtu.be/A8xMWghBfdk
